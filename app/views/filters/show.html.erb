@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @filter.name %>
+</p>
+
+<p>
+  <strong>Function name:</strong>
+  <%= @filter.function_name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @filter.description %>
+</p>
+
+<p>
+  <strong>Num parameters:</strong>
+  <%= @filter.num_parameters %>
+</p>
+
+<p>
+  <strong>Example:</strong>
+  <%= @filter.example %>
+</p>
+
+<%= link_to 'Edit', edit_filter_path(@filter) %> |
+<%= link_to 'Back', filters_path %>

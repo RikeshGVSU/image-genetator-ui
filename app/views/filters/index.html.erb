@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Filters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Function name</th>
+      <th>Description</th>
+      <th>Num parameters</th>
+      <th>Example</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @filters.each do |filter| %>
+      <tr>
+        <td><%= filter.name %></td>
+        <td><%= filter.function_name %></td>
+        <td><%= filter.description %></td>
+        <td><%= filter.num_parameters %></td>
+        <td><%= filter.example %></td>
+        <td><%= link_to 'Show', filter %></td>
+        <td><%= link_to 'Edit', edit_filter_path(filter) %></td>
+        <td><%= link_to 'Destroy', filter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Filter', new_filter_path %>
