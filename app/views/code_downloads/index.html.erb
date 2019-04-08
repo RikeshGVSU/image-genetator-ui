@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Code Downloads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Versions</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @code_downloads.each do |code_download| %>
+      <tr>
+        <td><%= code_download.versions %></td>
+        <td><%= code_download.description %></td>
+        <td><%= link_to 'Show', code_download %></td>
+        <td><%= link_to 'Edit', edit_code_download_path(code_download) %></td>
+        <td><%= link_to 'Destroy', code_download, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Code Download', new_code_download_path %>

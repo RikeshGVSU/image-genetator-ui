@@ -8,7 +8,7 @@ class FiltersController < ApplicationController
     respond_to do |format|
      format.html {render :index}
      format.json {render :index, status: :ok}
-     format.xml {render xml: @users.as_json}
+     format.xml {render xml: @filters.as_json}
     end
   end
 

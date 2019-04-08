@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Versions:</strong>
+  <%= @code_download.versions %>
+</p>
+<%= link_to 'download',@code_download.file %>
+<p>
+  <strong>Description:</strong>
+  <%= @code_download.description %>
+</p>
+
+<%= link_to 'Edit', edit_code_download_path(@code_download) %> |
+<%= link_to 'Back', code_downloads_path %>
