@@ -23,8 +23,10 @@
         <td><%= filter.num_parameters %></td>
         <td><%= filter.example %></td>
         <td><%= link_to 'Show', filter %></td>
+        <% if signed_in? %>
         <td><%= link_to 'Edit', edit_filter_path(filter) %></td>
         <td><%= link_to 'Destroy', filter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

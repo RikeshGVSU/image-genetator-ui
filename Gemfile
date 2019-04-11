@@ -17,7 +17,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'bootstrap', '~> 4.0.0'
 gem 'bootstrap_form'
 gem 'jquery-rails'
-gem 'rack-cors', :require => 'rack/cors'  
+gem 'rack-cors', :require => 'rack/cors'
+gem 'clearance', '~> 1.15.1' 
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
