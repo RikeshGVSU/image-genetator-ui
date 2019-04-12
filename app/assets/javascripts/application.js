@@ -11,6 +11,14 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require jquery.turbolinks
+
+$(document).on('turbolinks:load', function() {
+    $('#example').DataTable();
+} );

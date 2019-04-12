@@ -29,8 +29,10 @@
 		 </li>
 		</ul>
 		<% if signed_in? %>
-      Signed in as: <%= current_user.email %>
-      <%= button_to 'Sign out', sign_out_path, method: :delete %>
+		<div class="text-info">
+      	Signed in as: <%= current_user.email %>
+  		</div> &bsp
+      <%= button_to 'Sign out', sign_out_path, method: :delete , class: "btn btn-outline-success same-line" %>
     <% else %>
 	    <%= form_for :session, url: session_path, :html => { :class => 'form-inline' } do |form| %>
 	    <div class="form-group mb-2">
@@ -40,7 +42,7 @@
 		<div class="form-group mx-sm-3 mb-2">
 		    <%= form.password_field :password, placeholder: 'Password', class: "form-control" %>
 		</div>
-		    <%= form.submit :button, class: "btn btn-outline-success same-line"%>
+		    <%= form.submit :button => "Sign In", class: "btn btn-outline-success same-line"%>
 	     <% end %>
     <% end %>
 

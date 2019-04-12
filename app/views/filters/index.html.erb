@@ -2,15 +2,19 @@
 
 <h1>Filters</h1>
 
-<table>
-  <thead>
+<table id ="example" class="table table-striped table-bordered">
+  <thead class="thead-dark">
     <tr>
       <th>Name</th>
       <th>Function name</th>
       <th>Description</th>
       <th>Num parameters</th>
       <th>Example</th>
-      <th colspan="3"></th>
+      <th>Details</th>
+      <% if signed_in? %>
+        <th>Update</th>
+        <th>Delete</th>
+      <% end %>
     </tr>
   </thead>
 
@@ -24,8 +28,8 @@
         <td><%= filter.example %></td>
         <td><%= link_to 'Show', filter %></td>
         <% if signed_in? %>
-        <td><%= link_to 'Edit', edit_filter_path(filter) %></td>
-        <td><%= link_to 'Destroy', filter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Edit', edit_filter_path(filter) %></td>
+          <td><%= link_to 'Destroy', filter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
       </tr>
     <% end %>
@@ -35,3 +39,4 @@
 <br>
 
 <%= link_to 'New Filter', new_filter_path %>
+

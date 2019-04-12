@@ -19,6 +19,7 @@ gem 'bootstrap_form'
 gem 'jquery-rails'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'clearance', '~> 1.15.1' 
+gem 'jquery-turbolinks'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
