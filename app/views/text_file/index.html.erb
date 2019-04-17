@@ -1,0 +1,22 @@
+<h1>TextFile#index</h1>
+<p>Find me in app/views/text_file/index.html.erb</p>
+
+
+<div class="form-group">
+	<form id="text-file-form" class="col-sm-4">
+	  <label for="selectFilters">Select list:</label>
+	  <select class="form-control" id="selectFilters" >
+	  	<option>Select a function</option>
+	  </select>
+	  <div class = "form-group" id = "filter-description"></div>
+	  <div class = "form-group" id = "num-parameters"></div>
+	  <div class = "form-group" id = "input-example"></div>
+	  <div class = "form-group" id = "input-fields"></div>
+	  <button type="button" class="btn btn-primary btn-lg mr-1">Add This Function</button>
+	</form>
+  	<script type="text/javascript">
+   		getFilters();
+   		loadFilterDetails();
+	</script>
+</div>
+
