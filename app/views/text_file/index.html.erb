@@ -1,22 +1,57 @@
 <h1>TextFile#index</h1>
 <p>Find me in app/views/text_file/index.html.erb</p>
 
+<div class="row">
+  	<div class="col-sm-4 border border-info">
+		<form id="text-file-form" class="form-group">
+			<label for="selectFilters"><h4 class="text-danger">Select filters:</h4></label>
+			<div class="border-top">
+				<p> Select filter you wish to use and give the required parameters.
+				You can add multiple filters buy clicking "Add This Function" and selecting another filter</p>
+				<select class="form-control" id="selectFilters" >
+					<option>Select a function</option>
+				</select>
+				<div class = "form-group" id = "filter-description"></div>
+				<div class = "form-group" id = "num-parameters"></div>
+				<div class = "form-group" id = "input-example"></div>
+				<div class = "form-group" id = "input-fields"></div>
+				<button type="button" class="btn btn-primary btn-lg mr-1" id = "submit-filter-button" onclick="submitTheFilter()" >Add This Function</button>
+			</div>
+		</form>
+		<br><br>
+		<p id = "js-message" class="text-primary"></p>
+		<script type="text/javascript">
+			getFilters();
+			loadFilterDetails();
+		</script>
+  	</div>
 
-<div class="form-group">
-	<form id="text-file-form" class="col-sm-4">
-	  <label for="selectFilters">Select list:</label>
-	  <select class="form-control" id="selectFilters" >
-	  	<option>Select a function</option>
-	  </select>
-	  <div class = "form-group" id = "filter-description"></div>
-	  <div class = "form-group" id = "num-parameters"></div>
-	  <div class = "form-group" id = "input-example"></div>
-	  <div class = "form-group" id = "input-fields"></div>
-	  <button type="button" class="btn btn-primary btn-lg mr-1">Add This Function</button>
+	<div class="col-sm-4 border border-info">
+	<form id="text-file-form" class="form-group">
+	<label for="selectFilters" ><h4 class="text-danger">Add Image Name:</h4></label>
+	<p class="border-top">Please add the names of the images you wish to add. Each image names must be sapareted by "&&"</p>
+	<p>Example: image1.jpg && image2.png && image3.jpg</p>
+	<input type="text" id="image-names" placeholder="image1.jpg && image2.png" class="form-control">
+	<br>
+	<label for="selectFilters" ><h4>Add number of filters to be Used:</h4></label>
+	<p class="border-top">Please add the number of filters to be used in each image.</p>
+	<p>If you wish to use all possible combinations please input "all"</p>
+	<input type="text" id="filter-number" placeholder="all" value="all" class="form-control">
+	<br>
+	<button type="button" class="btn btn-primary btn-lg mr-1" id = "submit-images-button" onclick="submitImages()" >Add these image names</button>
 	</form>
-  	<script type="text/javascript">
-   		getFilters();
-   		loadFilterDetails();
-	</script>
+	<br><br>
+	<p id = "js-message" class="text-primary"></p>
+	</div>
+	<div class="col-sm-4 border border-info">
+		<h4 class="text-danger">Text File Content</h4>
+		<div id="text-file-content" class="container border-top"></div>
+		<br>
+	<button type="button" class="btn btn-primary btn-lg mr-1" id = "generate-text-file" onclick="generateTextFile()" >Generate a Text File</button>
+	</div>
 </div>
+<script type="text/javascript">
+		getFilters();
+		loadFilterDetails();
+	</script>
 
