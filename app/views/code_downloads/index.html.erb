@@ -2,7 +2,7 @@
 
 <h1>Code Downloads</h1>
 <br><br>
-<table id ="example" class="table table-striped table-bordered">
+<table id ="tableDownload" class="table table-striped table-bordered">
   <thead class="thead-dark">
     <tr>
       <th>Versions</th>
@@ -36,3 +36,9 @@
 <% if signed_in? %>
 <%= link_to 'New Code Download', new_code_download_path %>
 <% end %>
+
+<script>
+$(document).ready( function () {
+  $('#tableDownload').DataTable();
+} );
+</script>

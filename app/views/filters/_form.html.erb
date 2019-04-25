@@ -1,4 +1,4 @@
-<%= form_with(model: filter, local: true) do |form| %>
+<%= form_with(model: filter, local: true, :class=>"form-group col-sm-4") do |form| %>
   <% if filter.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(filter.errors.count, "error") %> prohibited this filter from being saved:</h2>
@@ -13,30 +13,30 @@
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :function_name %>
-    <%= form.text_field :function_name %>
+    <%= form.text_field :function_name, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description , class: "form-control"%>
   </div>
 
   <div class="field">
     <%= form.label :num_parameters %>
-    <%= form.number_field :num_parameters %>
+    <%= form.number_field :num_parameters, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :example %>
-    <%= form.text_field :example %>
+    <%= form.text_field :example, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-primary"%>
   </div>
 <% end %>
