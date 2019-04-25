@@ -33,5 +33,6 @@
 </table>
 
 <br>
-
+<% if signed_in? %>
 <%= link_to 'New Code Download', new_code_download_path %>
+<% end %>

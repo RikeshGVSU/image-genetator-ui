@@ -5,10 +5,10 @@ class CodeDownloadsControllerTest < ActionDispatch::IntegrationTest
     @code_download = code_downloads(:one)
   end
 
-  test "should get index" do
-    get code_downloads_url
-    assert_response :success
-  end
+  # test "should get index" do
+  #   get code_downloads_url
+  #   assert_response :success
+  # end
 
   test "should get new" do
     get new_code_download_url
@@ -23,10 +23,10 @@ class CodeDownloadsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to code_download_url(CodeDownload.last)
   end
 
-  test "should show code_download" do
-    get code_download_url(@code_download)
-    assert_response :success
-  end
+  # test "should show code_download" do
+  #   get code_download_url(@code_download)
+  #   assert_response :success
+  # end
 
   test "should get edit" do
     get edit_code_download_url(@code_download)
