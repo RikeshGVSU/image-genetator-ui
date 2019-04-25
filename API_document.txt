@@ -1,0 +1,20 @@
+
+API to get all the filters
+Parameters: None
+Return Datatype: JSON, URL: https://image-generator-ui.herokuapp.com/filters.json
+Return Datatype: XML, URL: https://image-generator-ui.herokuapp.com/filters.xml
+
+API to get a single filter information
+Parameters: 
+    ID: The filter ID
+Return Datatype: JSON, URL: https://image-generator-ui.herokuapp.com/filters/{ID}.json
+
+API to get all the downloads details
+Parameters: mnone
+Return Datatype: JSON, URL: https://image-generator-ui.herokuapp.com/code_downloads.json
+Return Datatype: XML, URL: https://image-generator-ui.herokuapp.com/code_downloads.xml
+
+API to get a single source code download information
+Parameters: 
+    ID: The source code download ID
+Return Datatype: JSON, URL: https://image-generator-ui.herokuapp.com/code_downloads/1.json
