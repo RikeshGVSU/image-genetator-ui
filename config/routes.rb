@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'about/index'
   get 'text_file/index'
   resources :code_downloads
   resources :filters
